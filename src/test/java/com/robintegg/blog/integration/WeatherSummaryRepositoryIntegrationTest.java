@@ -16,7 +16,7 @@ import com.robintegg.blog.repositories.WeatherSummaryRepository;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("stub-temperature")
-public class WeatherSummaryRepositoryIT {
+public class WeatherSummaryRepositoryIntegrationTest {
 
 	@Autowired
 	private WeatherSummaryRepository repository;

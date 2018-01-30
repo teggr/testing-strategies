@@ -19,7 +19,9 @@ import com.robintegg.blog.gateways.StubTemperatureService;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("stub-temperature")
-public class TestingStrategiesApplicationTests {
+public class TestingStrategiesApplicationComponentTest {
+
+	// wiremock or mocky
 
 	@Autowired
 	private TestRestTemplate testRestTemplate;

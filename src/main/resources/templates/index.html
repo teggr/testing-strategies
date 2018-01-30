@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"></meta>
+
+<title>The HTML5 Herald</title>
+<meta name="description" content="The HTML5 Herald"></meta>
+<meta name="author" content="SitePoint"></meta>
+
+<!--   <link rel="stylesheet" href="css/styles.css?v=1.0"></link> -->
+
+<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+	<h1>The Weather App</h1>
+
+	<button class="get">Get me the weather...</button>
+
+	<table class="summary" style="display: none">
+		<thead>
+			<tr>
+				<th>Celcius</th>
+				<th>Fahrenheit</th>
+				<th>Outlook</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td id="a"></td>
+			<td id="b"></td>
+			<td id="c"></td>
+			<td id="d"></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$('.get').click(function() {
+			$.get('/').done(function(data) {
+
+				console.log(data);
+				$('#a').text(data.celcius);
+				$('#b').text(data.fahrenheit);
+				$('#c').text(data.outlook);
+				$('#d').text(data.time);
+
+				$('.summary').show();
+
+			});
+
+		});
+	</script>
+
+</body>
+</html>

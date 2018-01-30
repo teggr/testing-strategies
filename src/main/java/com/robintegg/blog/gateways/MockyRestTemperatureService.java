@@ -11,7 +11,7 @@ import com.robintegg.blog.domain.Temperature;
 @Service
 public class MockyRestTemperatureService implements TemperatureService {
 
-	public static final String MOCKY_GET_URL = "http://www.mocky.io/v2/5a6e29c02e00003d22b8db6b";
+	public static String MOCKY_GET_URL = "http://www.mocky.io/v2/5a6e29c02e00003d22b8db6b";
 
 	private final RestTemplate restTemplate;
 

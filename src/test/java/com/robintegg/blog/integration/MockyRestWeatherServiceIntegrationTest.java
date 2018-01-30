@@ -16,7 +16,7 @@ import com.robintegg.blog.gateways.MockyRestTemperatureService;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("mocky-temperature")
-public class MockyRestWeatherServiceIT {
+public class MockyRestWeatherServiceIntegrationTest {
 
 	@Autowired
 	private MockyRestTemperatureService mockyRestTemperatureService;
